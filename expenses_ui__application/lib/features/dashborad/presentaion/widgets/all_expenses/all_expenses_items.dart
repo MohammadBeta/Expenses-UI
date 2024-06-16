@@ -1,5 +1,5 @@
 import 'package:expenses_ui__application/core/utilis/constatnts/app_images.dart';
-import 'package:expenses_ui__application/features/dashborad/presentaion/widgets/expenses/un_active_expenses_item.dart';
+import 'package:expenses_ui__application/features/dashborad/presentaion/widgets/all_expenses/un_active_expenses_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

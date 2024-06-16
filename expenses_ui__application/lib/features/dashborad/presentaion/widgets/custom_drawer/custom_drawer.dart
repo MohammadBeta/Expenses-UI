@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import '../../../../core/utilis/constatnts/app_images.dart';
-import '../../data/models/drawer_item_model.dart';
-import '../../data/models/user_info_model.dart';
+import '../../../../../core/utilis/constatnts/app_images.dart';
+import '../../../data/models/drawer_item_model.dart';
+import '../../../data/models/user_info_model.dart';
 import 'custom_drawer_item.dart';
 import 'drawer_items_list_view.dart';
-import 'user_list_tile_info.dart';
+import '../user_list_tile_info.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -18,7 +18,7 @@ class CustomDrawer extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       child: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: UserListTileInfo(
               userInfoModel: UserInfoModel(
                   userName: "Lekan Okeowo",

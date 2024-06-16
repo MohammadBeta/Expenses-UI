@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../core/utilis/constatnts/app_styles.dart';
 import '../../../data/models/expense_model.dart';
-import '../custom_background_container.dart';
+import '../../../../../core/widgets/custom_background_container.dart';
 
 class UnActiveExpensesItem extends StatelessWidget {
   const UnActiveExpensesItem({super.key, required this.expenseModel});

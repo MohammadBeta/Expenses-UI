@@ -3,5 +3,5 @@ class UserInfoModel{
   final String email;
   final String profileImage;
 
-  UserInfoModel({required this.userName, required this.email, required this.profileImage});
+  const UserInfoModel({required this.userName, required this.email, required this.profileImage});
 }

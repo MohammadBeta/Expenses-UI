@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utilis/constatnts/global.dart';
+import '../../../../../core/utilis/constatnts/global.dart';
 import 'custom_drawer_item.dart';
 
 class DrawerItemsListView extends StatefulWidget {

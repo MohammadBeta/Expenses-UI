@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utilis/constatnts/app_styles.dart';
-import '../custom_background_container.dart';
+import '../../../../../core/widgets/custom_background_container.dart';
 
 class AllExpensesHeader extends StatelessWidget {
   const AllExpensesHeader({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../core/utilis/constatnts/app_styles.dart';
-import '../../data/models/drawer_item_model.dart';
+import '../../../../../core/utilis/constatnts/app_styles.dart';
+import '../../../data/models/drawer_item_model.dart';
 
 class CustomDrawerItem extends StatelessWidget {
   const CustomDrawerItem(
