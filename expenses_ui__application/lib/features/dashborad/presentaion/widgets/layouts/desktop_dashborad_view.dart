@@ -1,6 +1,9 @@
 import 'package:expenses_ui__application/features/dashborad/presentaion/widgets/custom_drawer.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+
+import '../expenses/all_expenses.dart';
 
 class DesktopDashboradView extends StatelessWidget {
   const DesktopDashboradView({super.key});
@@ -22,17 +25,13 @@ class Expenses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-AllExpenses()
-    ],);
-  }
-}
-
-class AllExpenses extends StatelessWidget {
-  const AllExpenses({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Padding(
+      padding: EdgeInsets.only(top: 40, left: 12, right: 12),
+      child: Column(
+        children: [
+          Flexible(child: SizedBox(height: 320, child: AllExpenses())),
+        ],
+      ),
+    );
   }
 }
