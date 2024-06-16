@@ -16,24 +16,21 @@ class CustomDrawerItem extends StatelessWidget {
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 35),
-      child: GestureDetector(
-        onTap:onTap,
-        child: SizedBox(
-            child: ListTile(
-                trailing: isSelected
-                    ? Container(
-                        width: 4,
-                        color: const Color(0xff4EB7F2),
-                      )
-                    : const SizedBox(),
-                leading: SvgPicture.asset(drawerItem.icon),
-                title: Text(
-                  drawerItem.title,
-                  style:  isSelected ? AppStyles.styleBold16 : AppStyles.styleRegular16,
-                ))),
-      ),
+    return GestureDetector(
+      onTap:onTap,
+      child: SizedBox(
+          child: ListTile(
+              trailing: isSelected
+                  ? Container(
+                      width: 4,
+                      color: const Color(0xff4EB7F2),
+                    )
+                  : const SizedBox(),
+              leading: SvgPicture.asset(drawerItem.icon),
+              title: Text(
+                drawerItem.title,
+                style:  isSelected ? AppStyles.styleBold16 : AppStyles.styleRegular16,
+              ))),
     );
   }
 }

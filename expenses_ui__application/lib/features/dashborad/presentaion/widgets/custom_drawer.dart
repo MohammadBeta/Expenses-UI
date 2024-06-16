@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import '../../../../core/utilis/constatnts/app_images.dart';
 import '../../data/models/drawer_item_model.dart';
@@ -10,42 +12,58 @@ import 'user_list_tile_info.dart';
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        children: [
-          UserListTileInfo(
-            userInfoModel: UserInfoModel(
-                userName: "Lekan Okeowo",
-                email: "demo@gmail.com",
-                profileImage: AppImages.imagesAvatar3),
+      padding: const EdgeInsets.all(8),
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: UserListTileInfo(
+              userInfoModel: UserInfoModel(
+                  userName: "Lekan Okeowo",
+                  email: "demo@gmail.com",
+                  profileImage: AppImages.imagesAvatar3),
+            ),
           ),
-          const SizedBox(
-            height: 25,
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 25,
+            ),
           ),
           const DrawerItemsListView(),
-          const Expanded(child: SizedBox()),
-           CustomDrawerItem(
-            onTap: () {
-              
-            },
-            drawerItem: DrawerItemModel(
-                title: "Logout",
-                icon: AppImages.imagesLogout,
-               ),
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 50,
+            ),
           ),
-           CustomDrawerItem(
-            onTap: () {
-              
-            },
-            drawerItem: DrawerItemModel(
-                title: "Settings",
-                icon: AppImages.imagesSettings,
-              
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                const Expanded(child: SizedBox()),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 25),
+                  child: CustomDrawerItem(
+                    onTap: () {},
+                    drawerItem: const DrawerItemModel(
+                      title: "Logout",
+                      icon: AppImages.imagesLogout,
+                    ),
+                  ),
                 ),
+                CustomDrawerItem(
+                  onTap: () {},
+                  drawerItem: const DrawerItemModel(
+                    title: "Settings",
+                    icon: AppImages.imagesSettings,
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+              ],
+            ),
           ),
         ],
       ),

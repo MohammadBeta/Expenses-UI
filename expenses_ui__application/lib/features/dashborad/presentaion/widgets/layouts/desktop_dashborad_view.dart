@@ -10,9 +10,29 @@ class DesktopDashboradView extends StatelessWidget {
     return const Row(
       children: [
         Expanded(flex: 2, child: CustomDrawer()),
-        Expanded(flex: 4, child: SizedBox()),
+        Expanded(flex: 4, child: Expenses()),
         Expanded(flex: 3, child: SizedBox()),
       ],
     );
+  }
+}
+
+class Expenses extends StatelessWidget {
+  const Expenses({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+AllExpenses()
+    ],);
+  }
+}
+
+class AllExpenses extends StatelessWidget {
+  const AllExpenses({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
