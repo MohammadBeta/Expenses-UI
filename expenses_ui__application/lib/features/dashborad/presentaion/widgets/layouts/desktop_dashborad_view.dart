@@ -2,6 +2,8 @@ import 'package:expenses_ui__application/features/dashborad/presentaion/widgets/
 import 'package:expenses_ui__application/features/dashborad/presentaion/widgets/expenses.dart';
 import 'package:flutter/material.dart';
 
+import '../my_card.dart';
+
 class DesktopDashboradView extends StatelessWidget {
   const DesktopDashboradView({super.key});
 
@@ -11,7 +13,7 @@ class DesktopDashboradView extends StatelessWidget {
       children: [
         Expanded(flex: 2, child: CustomDrawer()),
         Expanded(flex: 4, child: Expenses()),
-        Expanded(flex: 3, child: SizedBox()),
+        Expanded(flex: 3, child: CardAndTransationsSection()),
       ],
     );
   }
