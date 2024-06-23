@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'my_card_section.dart';
+import 'transaction_section.dart';
 
 class CardAndTransationsSection extends StatelessWidget {
   const CardAndTransationsSection({super.key});
@@ -13,6 +14,10 @@ class CardAndTransationsSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           MyCardSection(),
+          Divider(
+            height: 40,
+          ),
+          TransactionSection()
         ],
       ),
     );
