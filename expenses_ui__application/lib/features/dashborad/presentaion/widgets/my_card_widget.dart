@@ -1,26 +1,15 @@
-import 'package:expenses_ui__application/core/utilis/constatnts/app_images.dart';
-import 'package:expenses_ui__application/core/utilis/constatnts/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class MyCardSection extends StatelessWidget {
-  const MyCardSection({super.key});
+import '../../../../core/utilis/constatnts/app_images.dart';
+import '../../../../core/utilis/constatnts/app_styles.dart';
+
+class MyCardWidget extends StatelessWidget {
+  const MyCardWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            "My card",
-            style: AppStyles.styleSemiBold20,
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          AspectRatio(
+    return AspectRatio(
             aspectRatio: 420 / 215,
             child: Container(
               decoration: BoxDecoration(
@@ -74,24 +63,6 @@ class MyCardSection extends StatelessWidget {
                 ],
               ),
             ),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class CardAndTransationsSection extends StatelessWidget {
-  const CardAndTransationsSection({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 40, left: 12, right: 12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [MyCardSection()],
-      ),
-    );
+          );
   }
 }

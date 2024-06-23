@@ -2,7 +2,8 @@ import 'package:expenses_ui__application/features/dashborad/presentaion/widgets/
 import 'package:expenses_ui__application/features/dashborad/presentaion/widgets/expenses.dart';
 import 'package:flutter/material.dart';
 
-import '../my_card.dart';
+import '../card_and_transations_section.dart';
+import '../my_card_section.dart';
 
 class DesktopDashboradView extends StatelessWidget {
   const DesktopDashboradView({super.key});
