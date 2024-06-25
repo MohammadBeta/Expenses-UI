@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class DashboradAdaptiveLayout extends StatelessWidget {
@@ -12,10 +14,11 @@ class DashboradAdaptiveLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
+        log(MediaQuery.sizeOf(context).width.toString());
         if (constraints.maxWidth < 600) //Mobile
         {
           return mobileLayout(context);
-        } else if (constraints.maxWidth < 900) //Tablet
+        } else if (constraints.maxWidth < 1200) //Tablet
         {
           return tabletLayout(context);
         } else //Desktop

@@ -29,7 +29,7 @@ class TransactionSection extends StatelessWidget {
           height: 20,
         ),
         const SizedBox(
-          height: 240,
+          height: 220,
           child: TransactionListView(),
         )
       ],

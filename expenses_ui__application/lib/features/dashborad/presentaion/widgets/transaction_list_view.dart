@@ -10,11 +10,13 @@ class TransactionListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      scrollDirection: Axis.vertical,
-      children: const [
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      children: [
         Padding(
-          padding: EdgeInsets.all(12),
-          child: TransactionItem(
+          padding:
+              const EdgeInsets.symmetric(horizontal: 12).copyWith(bottom: 12),
+          child: const TransactionItem(
             transactionName: "Cash Withdrawal",
             date: "13 Apr, 2022 ",
             amount: r"$20,129",
@@ -22,8 +24,9 @@ class TransactionListView extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.all(12),
-          child: TransactionItem(
+          padding:
+              const EdgeInsets.symmetric(horizontal: 12).copyWith(bottom: 12),
+          child: const TransactionItem(
             transactionName: "Landing Page project",
             date: "13 Apr, 2022 at 3:30 PM",
             amount: r"$20,129",
@@ -31,8 +34,9 @@ class TransactionListView extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.all(12),
-          child: TransactionItem(
+          padding:
+              const EdgeInsets.symmetric(horizontal: 12).copyWith(bottom: 12),
+          child: const TransactionItem(
             transactionName: "Juni Mobile App project",
             date: "13 Apr, 2024 at 2:15 AM",
             amount: r"$20,129",
