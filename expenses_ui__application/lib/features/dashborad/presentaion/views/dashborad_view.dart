@@ -30,11 +30,13 @@ class TabletDashordView extends StatelessWidget {
         Expanded(flex: 2, child: CustomDrawer()),
         Expanded(
             flex: 5,
-            child: Column(
-              children: [
-                Expanded(child: Expenses()),
-                Expanded(child: CardAndTransationsSection()),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Expenses(),
+                  CardAndTransationsSection(),
+                ],
+              ),
             )),
       ],
     );
