@@ -29,7 +29,7 @@ class CustomDrawerItem extends StatelessWidget {
               leading: SvgPicture.asset(drawerItem.icon),
               title: Text(
                 drawerItem.title,
-                style:  isSelected ? AppStyles.styleBold16 : AppStyles.styleRegular16,
+                style:  isSelected ? AppStyles.styleBold16(context) : AppStyles.styleRegular16(context),
               ))),
     );
   }

@@ -43,7 +43,7 @@ class UnActiveExpensesItem extends StatelessWidget {
           FittedBox(
             child: Text(
               expenseModel.title,
-              style: AppStyles.styleSemiBold16,
+              style: AppStyles.styleSemiBold16(context),
             ),
           ),
           const SizedBox(
@@ -52,7 +52,7 @@ class UnActiveExpensesItem extends StatelessWidget {
           FittedBox(
             child: Text(
               expenseModel.date,
-              style: AppStyles.styleRegular14
+              style: AppStyles.styleRegular14(context)
                   .copyWith(color: const Color(0xffAAAAAA)),
             ),
           ),
@@ -62,7 +62,7 @@ class UnActiveExpensesItem extends StatelessWidget {
           FittedBox(
             child: Text(
               expenseModel.price,
-              style: AppStyles.styleSemiBold24,
+              style: AppStyles.styleSemiBold24(context),
             ),
           ),
         ],

@@ -47,7 +47,7 @@ class ActiveExpensesItem extends StatelessWidget {
           FittedBox(
             child: Text(
               expenseModel.title,
-              style: AppStyles.styleSemiBold16.copyWith(color: Colors.white),
+              style: AppStyles.styleSemiBold16(context).copyWith(color: Colors.white),
             ),
           ),
           const SizedBox(
@@ -56,7 +56,7 @@ class ActiveExpensesItem extends StatelessWidget {
           FittedBox(
             child: Text(
               expenseModel.date,
-              style: AppStyles.styleRegular14.copyWith(color: Colors.white),
+              style: AppStyles.styleRegular14(context).copyWith(color: Colors.white),
             ),
           ),
           const SizedBox(
@@ -65,7 +65,7 @@ class ActiveExpensesItem extends StatelessWidget {
           FittedBox(
             child: Text(
               expenseModel.price,
-              style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+              style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
             ),
           ),
         ],

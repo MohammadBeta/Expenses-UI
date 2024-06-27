@@ -28,12 +28,12 @@ class IncomeDetails extends StatelessWidget {
               ),
               Text(
                 incomesList[index].incomeTitle,
-                style: AppStyles.styleRegular16,
+                style: AppStyles.styleRegular16(context),
               ),
               const Expanded(child: SizedBox()),
               Text(
                 "${incomesList[index].rate.toString()}%",
-                style: AppStyles.styleMedium16,
+                style: AppStyles.styleMedium16(context),
               )
             ],
           ),

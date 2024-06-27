@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utilis/constatnts/app_styles.dart';
@@ -14,13 +13,14 @@ class QuickInvoiceField extends StatelessWidget {
       children: [
         Text(
           hintText,
-          style: AppStyles.styleMedium16,
+          style: AppStyles.styleMedium16(context),
         ),
         TextField(
           decoration: InputDecoration(
               contentPadding: const EdgeInsets.only(left: 20),
               hintText: "Type ${hintText.toLowerCase()}",
-              hintStyle: AppStyles.styleRegular16.copyWith(color: Colors.grey),
+              hintStyle: AppStyles.styleRegular16(context)
+                  .copyWith(color: Colors.grey),
               enabledBorder: InputBorder.none,
               focusedBorder: InputBorder.none),
         )
