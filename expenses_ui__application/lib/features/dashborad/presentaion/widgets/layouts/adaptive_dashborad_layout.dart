@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:expenses_ui__application/core/utilis/constatnts/size_config.dart';
 import 'package:flutter/material.dart';
 
 class DashboradAdaptiveLayout extends StatelessWidget {
@@ -15,15 +16,14 @@ class DashboradAdaptiveLayout extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         log(MediaQuery.sizeOf(context).width.toString());
-        if (constraints.maxWidth < 800) //Mobile
-        {
-          return mobileLayout(context);
-        } else if (constraints.maxWidth < 1200) //Tablet
-        {
-          return tabletLayout(context);
-        } else //Desktop
+        if (constraints.maxWidth > SizeConfig.desktop) //Desktop
         {
           return desktopLayout(context);
+        } else if (constraints.maxWidth > SizeConfig.tablet) //Tablet
+        {
+          return tabletLayout(context);
+        } else {
+          return mobileLayout(context);
         }
       },
     );

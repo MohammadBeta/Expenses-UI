@@ -1,3 +1,4 @@
+import 'package:expenses_ui__application/core/utilis/constatnts/size_config.dart';
 import 'package:flutter/material.dart';
 
 import 'features/dashborad/presentaion/views/dashborad_view.dart';
@@ -11,7 +12,8 @@ class DashboradApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    SizeConfig.init(context);
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: DashboradView(),
     );

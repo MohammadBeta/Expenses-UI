@@ -1,3 +1,4 @@
+import 'package:expenses_ui__application/core/utilis/constatnts/size_config.dart';
 import 'package:flutter/material.dart';
 
 abstract class AppStyles {
@@ -92,16 +93,32 @@ abstract class AppStyles {
   }
 }
 
+// sacleFactor
+// responsive font size
+// (min , max) fontsize
 double getResponsiveTextSize(
     {required BuildContext context, required double baseFontSize}) {
+  double scaleFactor = getScaleFactor(context);
+  double responsiveFontSize = baseFontSize * scaleFactor;
+
+  double lowerLimit = baseFontSize * .8;
+  double upperLimit = baseFontSize * 1.2;
+
+  return responsiveFontSize.clamp(lowerLimit, upperLimit);
+}
+
+double getScaleFactor(context) {
+  // var dispatcher = PlatformDispatcher.instance;
+  // var physicalWidth = dispatcher.views.first.physicalSize.width;
+  // var devicePixelRatio = dispatcher.views.first.devicePixelRatio;
+  // double width = physicalWidth / devicePixelRatio;
+
   double width = MediaQuery.sizeOf(context).width;
-  double finalFontSize = baseFontSize;
-  if (width < 400) {
-    finalFontSize = baseFontSize * (width / 400);
-  } else if (width < 700) {
-    finalFontSize = baseFontSize * (width / 700);
-  } else if (width < 1000) {
-    finalFontSize = baseFontSize * (width / 1000);
+  if (width < SizeConfig.tablet) {
+    return width / 550;
+  } else if (width < SizeConfig.desktop) {
+    return width / 1000;
+  } else {
+    return width / 1920;
   }
-  return finalFontSize;
 }
