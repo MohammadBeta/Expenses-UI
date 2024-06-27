@@ -15,7 +15,7 @@ class DashboradAdaptiveLayout extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         log(MediaQuery.sizeOf(context).width.toString());
-        if (constraints.maxWidth < 600) //Mobile
+        if (constraints.maxWidth < 800) //Mobile
         {
           return mobileLayout(context);
         } else if (constraints.maxWidth < 1200) //Tablet
